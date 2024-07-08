@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:store_app/constant/constant.dart';
 
-import 'package:store_app/screens/splash_screen.dart';
+import 'package:store_app/views/splash_screen.dart';
 
 import 'provider/product_provider.dart';
 

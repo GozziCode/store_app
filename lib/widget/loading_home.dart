@@ -7,6 +7,8 @@ class LoadingHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double screenWidth = MediaQuery.of(context).size.width;
+    final double screenHeight = MediaQuery.of(context).size.height;
     return GridView.builder(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
@@ -17,36 +19,37 @@ class LoadingHome extends StatelessWidget {
         itemCount: 4,
         itemBuilder: (_, index) {
           return Container(
-            margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-            height: 300,
-            width: 200,
-            child: const Column(
+            margin: EdgeInsets.symmetric(
+                horizontal: screenWidth * 0.04, vertical: screenHeight * 0.02),
+            height: screenHeight * 0.35,
+            width: screenWidth * 0.45,
+            child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 LoadingSkeleton(
                   radius: 16,
-                  height: 120,
-                  width: 200,
+                  height: screenHeight * 0.15,
+                  width: screenWidth * 0.45,
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 LoadingSkeleton(
                   radius: 16,
-                  height: 25,
-                  width: 100,
+                  height: screenHeight * 0.03,
+                  width: screenWidth * 0.25,
                 ),
-                Spacer(),
+                const Spacer(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     LoadingSkeleton(
                       radius: 16,
-                      height: 25,
-                      width: 100,
+                      height: screenHeight * 0.03,
+                      width: screenWidth * 0.25,
                     ),
                     LoadingSkeleton(
                       radius: 50,
-                      height: 50,
-                      width: 50,
+                      height: screenHeight * 0.06,
+                      width: screenHeight * 0.06,
                     ),
                   ],
                 ),

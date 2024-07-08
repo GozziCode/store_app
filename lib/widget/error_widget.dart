@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:store_app/widget/action_button.dart';
 
-import '../constant/constant.dart';
 import '../provider/product_provider.dart';
 
 class ErrowWidget extends StatelessWidget {
@@ -12,45 +12,36 @@ class ErrowWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double textScaleFactor = MediaQuery.textScalerOf(context).scale(1.5);
+    final double screenHeight = MediaQuery.of(context).size.height;
+    final double screenWidth = MediaQuery.of(context).size.width;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24),
       child: Center(
-        child: Column(
+        child: ListView(
           children: [
-            const SizedBox(
-              height: 80,
+            SizedBox(
+              height: screenHeight * 0.2,
             ),
             const Icon(
               Icons.wifi_off_rounded,
               size: 100,
             ),
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: screenHeight * .02,
             ),
             Text(
               provider.errorMessage!,
               textAlign: TextAlign.center,
-            ),
-            const SizedBox(
-              height: 25,
+              style: TextStyle(fontSize: 14 * textScaleFactor),
             ),
             SizedBox(
-              height: 50,
-              width: 250,
-              child: ElevatedButton(
-                onPressed: () {
-                  provider.fetchProducts();
-                },
-                style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    backgroundColor: AppColors.primaryColor),
-                child: const Text(
-                  'Try again',
-                  style: TextStyle(color: AppColors.white, fontSize: 18),
-                ),
-              ),
+              height: screenHeight * .05,
+            ),
+            ActionButton(
+              width: screenWidth * 0.1,
+              onPress: () => provider.fetchProducts(),
+              title: 'Try again',
             )
           ],
         ),
