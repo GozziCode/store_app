@@ -3,8 +3,14 @@ import 'package:flutter/material.dart';
 class LoadingSkeleton extends StatelessWidget {
   final double? height;
   final double? width;
+  final double radius;
 
-  const LoadingSkeleton({super.key, this.height, this.width});
+  const LoadingSkeleton({
+    super.key,
+    this.height,
+    this.width,
+    required this.radius,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +18,8 @@ class LoadingSkeleton extends StatelessWidget {
       height: height,
       width: width,
       decoration: BoxDecoration(
-          color: Colors.black.withOpacity(0.04),
-          borderRadius: BorderRadius.circular(16)),
+          color: Colors.black.withOpacity(0.13),
+          borderRadius: BorderRadius.circular(radius)),
     );
   }
 }

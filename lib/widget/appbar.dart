@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 import 'package:store_app/constant/constant.dart';
@@ -45,6 +47,14 @@ AppBar homeAppBar(BuildContext context) {
               ],
             )
           ],
+        ),
+      ),
+      flexibleSpace: ClipRect(
+        child: BackdropFilter(
+          filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+          child: Container(
+            color: Colors.transparent,
+          ),
         ),
       ),
       bottom: PreferredSize(
