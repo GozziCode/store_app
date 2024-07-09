@@ -94,7 +94,7 @@ Handling asynchronous operations, such as fetching data from the API, was critic
 1.**Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/timo_stores.git
+   git clone https://github.com/yourusername/store_app.git
    ```
   
 2.**Navigate to the project directory**
