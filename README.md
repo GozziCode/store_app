@@ -177,7 +177,7 @@ Download [here](/gitfiles/spicey.apk)
 
 ## Appitize Link
 
-Try Spicey Demo: [Appitize.io](https://appetize.io/app/b_tqvpuuq5jeyqzj26pzzr3kjk7e)
+Try Spicey Demo: [Appitize.io](https://appetize.io/app/b_lvhmlpm4wge55ebyat2fgni65e)
 
 ## Author
 
